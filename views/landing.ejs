@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lob Letter Creator</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-align: center;"> Send A Letter To Your Senator</h1>
+                <div style="width: 30%; margin: 30px auto;">
+                    <% if(err) { %>
+                        <div class="alert alert-danger" role="alert">
+                          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                          <span class="sr-only">Error:</span>
+                          There was an error with your input.
+                        </div>
+                    <% } %>
+                    <form action="/new" method="POST">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="addrLine1" placeholder="Address Line 1">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="addrLine2" placeholder="Address Line 2">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="city" placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="state" placeholder="State">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="zip" placeholder="Zip">
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" type="text" name="message" placeholder="Type in your message" style="height: 200px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+	</body>
+	
+</html>
